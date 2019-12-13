@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DecemberAppTask.Views.PersonalCareProductsPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Orientation="Vertical" Spacing="10"  BackgroundColor="#6aba85" Padding="20" HeightRequest="70">
+                <Label Text="Personal Products Ratings" TextColor="White" FontSize="30" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <ListView HeightRequest="200" ItemsSource="{Binding Products}" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  Height="400" />
+                                       <!-- <RowDefinition  Height="110" />-->
+                                    </Grid.RowDefinitions>
+
+                                    <Frame CornerRadius="15" Grid.Column="0" Grid.Row="0">
+                                        <Image Source="{Binding ImgURL}" Aspect="Fill" HeightRequest="200"/>
+                                    </Frame>
+s
+                                    <Frame CornerRadius="15" Grid.Column="1" Grid.Row="0">
+                                        <StackLayout>
+                                            <Label Text="{Binding Name}" />
+                                            <Label Text="{Binding Rating}" />
+                                            <Label Text="{Binding MakerOfProduct}"/>
+                                            <Label Text="{Binding IngredientConcern}" />
+                                            <Label Text="{Binding IgredientRating}"/>
+                                            <Label Text="{Binding Ingredient}" />
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </ScrollView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

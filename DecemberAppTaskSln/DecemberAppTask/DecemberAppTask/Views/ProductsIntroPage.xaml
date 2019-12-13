@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DecemberAppTask.Views.ProductsIntroPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Spacing="10"  BackgroundColor="#3fb5c1" Padding="20" HeightRequest="100">
+                <Label Text="Let us Guide You" TextColor="White" FontSize="30" HorizontalTextAlignment="Center"/>
+                <Label Text="Search for healthier products" TextColor="White" FontSize="20" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="90" />
+                        <RowDefinition  Height="110" />
+                    </Grid.RowDefinitions>
+
+                    <Frame CornerRadius="15" Grid.Column="0" Grid.Row="0">
+                        <Label Text="Personal Care" />
+                    </Frame>
+
+                    <Frame CornerRadius="15" Grid.Column="1" Grid.Row="0">
+                        <Label Text="HouseHold" />
+                    </Frame>
+
+                    <Frame CornerRadius="15" Grid.Column="2" Grid.Row="0">
+                        <Label Text="Babies and Kids" />
+                    </Frame>
+                    
+                    <StackLayout Margin="10" Grid.Row="1" Grid.ColumnSpan="3" Orientation="Vertical">
+                        <Label Text="We have rated a lot of products"/>
+                        <Label Text="Our scientists analyze each product based on its composition. For over 10 years, we have guided millions of people to healthier choices."/>
+                        <Image Margin="0, 35" Source="appImage.png"/>
+                    </StackLayout>
+                </Grid>
+
+            </ScrollView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

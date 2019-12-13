@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DecemberAppTask.Views.Register"
+             Title="{Binding Title2}">
+
+    
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Complete Form" TextColor="Black"  FontSize="27" Margin="45,0,0,0"/>
+        <Entry Placeholder="Name" Margin="0, 30, 0, 0" PlaceholderColor="Black"/>
+        <Entry Placeholder="Email" Margin="0, 30, 0, 0" PlaceholderColor="Black"/>
+        <Entry Placeholder="Password" Margin="0, 30, 0, 0" PlaceholderColor="Black"/>
+        <Entry Placeholder="Confirm Password" Margin="0, 30, 0, 30" PlaceholderColor="Black"/>
+        <Button Text="Register" Command="{Binding GoToLAndingPageCommand}" WidthRequest="300" Padding="10"/>
+
+    </StackLayout>
+
+</ContentPage>

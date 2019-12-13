@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DecemberAppTask.Views.MainPage"
+             Title="{Binding Title}"
+             BackgroundColor="White">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Image Source="applogo.png" HorizontalOptions="Center" />
+        <Entry PlaceholderColor="Black" Placeholder="Email" Margin="0, -20, 0, 0"/>
+        <Entry PlaceholderColor="Black" Placeholder="Password" Margin="0, 30, 0, 30"/>
+        <Button Text="Login"  TextColor="Black" Command="{Binding GoToProductPageCommand}"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Dont have an account ?"/>
+            <Label Text="Register">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SendToRegister}">
+                        
+                    </TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
